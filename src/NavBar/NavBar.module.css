@@ -1,0 +1,43 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 16px;
+}
+
+.menuBtn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.logo {
+  color: #000;
+  font-size: 18px;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.navMenuItem {
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.navMenuItem a {
+  color: #000;
+  text-decoration: none;
+}
