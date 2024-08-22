@@ -18,19 +18,21 @@ function NavBar() {
       >
         <Menu />
       </button>
-      <Drawer isOpen={isOpen} onOpenChange={setIsOpen}>
-        <ul className={styles.navMenu}>
-          <li className={styles.navMenuItem}>
-            <a href="">Home</a>
-          </li>
-          <li className={styles.navMenuItem}>
-            <a href="">About</a>
-          </li>
-          <li className={styles.navMenuItem}>
-            <a href="">Contact</a>
-          </li>
-        </ul>
-      </Drawer>
+      {isOpen && (
+        <Drawer onOpenChange={setIsOpen}>
+          <ul className={styles.navMenu}>
+            <li className={styles.navMenuItem}>
+              <a href="">Home</a>
+            </li>
+            <li className={styles.navMenuItem}>
+              <a href="">About</a>
+            </li>
+            <li className={styles.navMenuItem}>
+              <a href="">Contact</a>
+            </li>
+          </ul>
+        </Drawer>
+      )}
     </nav>
   );
 }
