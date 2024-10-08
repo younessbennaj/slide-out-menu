@@ -29,6 +29,7 @@ function Drawer({
       ></div>
       <FocusLock>
         <div className={styles.drawer}>
+          <div>{children}</div>
           <button
             onClick={() => {
               onOpenChange(false);
@@ -37,7 +38,6 @@ function Drawer({
           >
             Close
           </button>
-          <div>{children}</div>
         </div>
       </FocusLock>
     </div>
