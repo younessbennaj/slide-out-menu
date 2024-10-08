@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <nav className={styles.navBar}>
       <a className={styles.logo} href="">
-        My App
+        TokyoVibe
       </a>
       <button
         className={styles.menuBtn}
@@ -25,10 +25,10 @@ function NavBar() {
               <a href="">Home</a>
             </li>
             <li className={styles.navMenuItem}>
-              <a href="">About</a>
+              <a href="">Gallery</a>
             </li>
             <li className={styles.navMenuItem}>
-              <a href="">Contact</a>
+              <a href="">Photographers</a>
             </li>
           </ul>
         </Drawer>
