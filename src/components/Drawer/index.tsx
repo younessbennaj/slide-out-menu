@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./Drawer.module.css";
 import FocusLock from "react-focus-lock";
+import { RemoveScroll } from "react-remove-scroll";
+import { useEscapeKey } from "../../hooks/useEscapeKey";
 
 function Drawer({
   children,
@@ -9,16 +11,9 @@ function Drawer({
   children: React.ReactNode;
   onOpenChange: (isOpen: boolean) => void;
 }) {
-  const closeBtnRef = React.useRef<HTMLButtonElement>(null);
-  React.useEffect(() => {
-    const currentlyFocusedElem = document.activeElement as HTMLElement;
-
-    closeBtnRef.current?.focus();
-
-    return () => {
-      currentlyFocusedElem?.focus();
-    };
-  }, []);
+  useEscapeKey(() => {
+    onOpenChange(false);
+  });
   return (
     <div className={styles.drawerContainer}>
       <div
@@ -27,18 +22,19 @@ function Drawer({
           onOpenChange(false);
         }}
       ></div>
-      <FocusLock>
-        <div className={styles.drawer}>
-          <div>{children}</div>
-          <button
-            onClick={() => {
-              onOpenChange(false);
-            }}
-            ref={closeBtnRef}
-          >
-            Close
-          </button>
-        </div>
+      <FocusLock returnFocus>
+        <RemoveScroll>
+          <div className={styles.drawer}>
+            <div>{children}</div>
+            <button
+              onClick={() => {
+                onOpenChange(false);
+              }}
+            >
+              Close
+            </button>
+          </div>
+        </RemoveScroll>
       </FocusLock>
     </div>
   );
