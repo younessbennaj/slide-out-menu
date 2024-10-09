@@ -1,50 +1,32 @@
-# React + TypeScript + Vite
+# Slide Out Menu Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h3>
+	<a href="https://slide-out-menu-kappa.vercel.app/" target="_blank">Demo</a>
+</h3>
 
-Currently, two official plugins are available:
+## Table of contents <a name="table-of-contents"></a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* [Table of contents](#table-of-contents)
+* [Overview](#overview)
+* [Features](#features)
 
-## Expanding the ESLint configuration
+## Overview <a name="overview"></a>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The **Slide Out Menu Component** is a flexible and reusable side navigation menu that smoothly slides in and out from the side of the screen. This component can be used to create responsive navigation experiences, particularly for mobile and tablet views, but also works well on desktop screens. It’s built to be easily customizable and seamlessly integrates with any React application.
 
-- Configure the top-level `parserOptions` property like this:
+### Built With
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+* React
+* Typescript
+* CSS
+* React Hooks
+* Framer Motion
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Features <a name="features"></a>
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- [x] **Smooth Slide Animation**: The menu smoothly slides in and out with a clean animation.
+- [x] **Responsive Design**: Works seamlessly on mobile, tablet, and desktop devices.
+- [x] **Customizable**: Easy to style and configure to fit different use cases.
+- [x] **Click Outside to Close**: Users can close the menu by clicking outside of it.
+- [x] **Keyboard Accessibility**: Supports closing the menu with the escape key.
+- [x] **Deploy the solution and submit Repository URL and Demo URL**.
